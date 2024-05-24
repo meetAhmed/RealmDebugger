@@ -69,7 +69,7 @@ struct RealmTableDetailRowView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 6)
-                .fill(Color.gray.opacity(0.3))
+                .fill(Color.gray.opacity(0.25))
         )
     }
 }

@@ -79,7 +79,7 @@ struct ListRealmTableRowView: View {
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 6)
-                .fill(Color.gray.opacity(0.3))
+                .fill(Color.gray.opacity(0.25))
         )
         .onTapGesture {
             RealmDebugger.presentRealmDebuggerViewForTable(tableName: tableName)
