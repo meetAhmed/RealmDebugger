@@ -39,7 +39,7 @@ struct ListRealmTableView: View {
                     Text("No record found")
                 } else {
                     ForEach(vm.listOfTables, id: \.self) { table in
-                        Text(table)
+                        ListRealmTableRowView(tableName: table)
                     }
                 }
             }
