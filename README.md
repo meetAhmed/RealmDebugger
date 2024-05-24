@@ -4,6 +4,8 @@
 
 `RealmDebugger` is a lightweight iOS library that helps you debug your Realm database. It provides a convenient way to browse and inspect your Realm tables and records directly from your app.
 
+https://github.com/meetAhmed/RealmDebugger/assets/42321000/f6acb740-506b-49c7-b46a-07158b86bd66
+
 ## Features
 
 - Automatically present a view controller to browse and inspect Realm database tables when you shake a device.
