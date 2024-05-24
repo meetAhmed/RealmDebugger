@@ -16,7 +16,6 @@ let package = Package(
         .target(
             name: "RealmDebugger",
             dependencies: [
-//                .product(name: "Realm", package: "realm-swift"),
                 .product(name: "RealmSwift", package: "realm-swift"),
             ],
             path: "Sources"

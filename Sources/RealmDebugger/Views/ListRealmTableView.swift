@@ -32,12 +32,37 @@ struct ListRealmTableView: View {
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach(vm.listOfTables, id: \.self) { table in
-                    ListRealmTableRowView(tableName: table)
+                if let url = Realm.Configuration.defaultConfiguration.fileURL {
+                    HeaderView(fileURL: url)
+                }
+                if vm.listOfTables.isEmpty {
+                    Text("No record found")
+                } else {
+                    ForEach(vm.listOfTables, id: \.self) { table in
+                        Text(table)
+                    }
                 }
             }
         }
-        .padding()
+        .padding(.horizontal)
+        .padding(.bottom)
+    }
+}
+
+@available(iOS 14.0, *)
+struct HeaderView: View {
+    let fileURL: URL
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(fileURL.absoluteString)
+        }
+        .padding(4)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(
+            RoundedRectangle(cornerRadius: 6)
+                .fill(Color.gray.opacity(0.25))
+        )
     }
 }
 
